@@ -12,6 +12,7 @@
  */
 package org.camunda.bpm.engine.impl.migration;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,7 +22,9 @@ import org.camunda.bpm.engine.migration.MigrationInstruction;
  * @author Thorben Lindhauer
  *
  */
-public class MigrationInstructionImpl implements MigrationInstruction {
+public class MigrationInstructionImpl implements MigrationInstruction, Serializable {
+
+  private static final long serialVersionUID = 1L;
 
   protected List<String> sourceActivityIds;
   protected List<String> targetActivityIds;
